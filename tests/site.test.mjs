@@ -25,7 +25,8 @@ test("contains the approved academic homepage content", async () => {
   assert.match(html, /IferW48AAAAJ/);
   assert.match(html, /0000-0003-3498-4741/);
   assert.equal((html.match(/class="obfuscated-email"/g) ?? []).length, 2);
-  assert.match(html, /nzhao[\s\S]*AT[\s\S]*iowastate[\s\S]*DOT[\s\S]*edu/);
+  assert.match(html, /nzhao[\s\S]*AT[\s\S]*iastate[\s\S]*DOT[\s\S]*edu/);
+  assert.doesNotMatch(html, /iowastate/i);
   assert.equal((html.match(/class="publication-self-author"/g) ?? []).length, 15);
 });
 
