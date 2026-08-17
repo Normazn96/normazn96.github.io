@@ -32,10 +32,6 @@ a {
   color: inherit;
 }
 
-button {
-  font: inherit;
-}
-
 .site-canvas {
   min-height: 100vh;
 }
@@ -63,7 +59,6 @@ button {
 }
 
 a:focus-visible,
-button:focus-visible,
 main:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 4px;
@@ -223,7 +218,7 @@ main:focus-visible {
   display: none;
 }
 
-.email-action,
+.obfuscated-email,
 .profile-links a {
   color: var(--accent);
   font-weight: 650;
@@ -231,18 +226,15 @@ main:focus-visible {
   text-underline-offset: 4px;
 }
 
-.email-action {
-  padding: 0;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  line-height: inherit;
-  text-align: left;
-  text-decoration-line: underline;
+.obfuscated-email {
+  white-space: nowrap;
 }
 
-.email-action:hover {
-  color: color-mix(in srgb, var(--accent) 76%, var(--ink));
+.email-word {
+  color: var(--muted);
+  font-size: 0.78em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .main-column {
@@ -445,12 +437,6 @@ main:focus-visible {
 
 .contact-section {
   padding-bottom: 52px;
-}
-
-.script-note {
-  margin-top: 14px !important;
-  color: var(--muted);
-  font-size: 13px;
 }
 
 footer {

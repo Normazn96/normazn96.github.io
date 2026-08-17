@@ -24,15 +24,13 @@ test("contains the approved academic homepage content", async () => {
   assert.match(html, /B\.S\. in Mathematics and Applied Mathematics \(Double Major\)/);
   assert.match(html, /IferW48AAAAJ/);
   assert.match(html, /0000-0003-3498-4741/);
+  assert.equal((html.match(/class="obfuscated-email"/g) ?? []).length, 2);
+  assert.match(html, /nzhao[\s\S]*AT[\s\S]*iowastate[\s\S]*DOT[\s\S]*edu/);
   assert.equal((html.match(/class="publication-self-author"/g) ?? []).length, 15);
 });
 
 test("keeps private CV and contact details out of public source", async () => {
-  const files = await Promise.all([
-    source("site/index.html"),
-    source("site/email.js"),
-    source("README.md"),
-  ]);
+  const files = await Promise.all([source("site/index.html"), source("README.md")]);
   const publicSource = files.join("\n");
   const atSign = String.fromCharCode(64);
 
@@ -58,7 +56,6 @@ test("includes all static publishing assets", async () => {
   const paths = [
     "site/index.html",
     "site/styles.css",
-    "site/email.js",
     "site/.nojekyll",
     "site/robots.txt",
     "site/sitemap.xml",
