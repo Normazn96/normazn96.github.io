@@ -17,3 +17,8 @@ The contact address is written with the words `AT` and `DOT` instead of symbols.
 keeps it readable without requiring a mail application and discourages basic address
 harvesting, although no public display method can guarantee complete protection from
 determined scraping.
+
+## Maintenance guide
+
+For step-by-step instructions written for a first-time website maintainer, see
+[Nan Zhao’s Academic Website: A No-Experience-Needed Maintenance Guide](MAINTENANCE_GUIDE.md).

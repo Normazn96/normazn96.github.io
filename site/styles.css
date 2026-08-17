@@ -87,49 +87,14 @@ main:focus-visible {
   border-radius: 7px;
 }
 
-.headshot-placeholder {
-  position: relative;
-  display: grid;
-  place-items: center;
+.profile-headshot {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: auto;
   margin-bottom: 25px;
-  overflow: hidden;
-  color: var(--muted);
-  background:
-    radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.7) 0 17%, transparent 17.5%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.48), transparent 58%),
-    var(--portrait);
-  border: 1px dashed color-mix(in srgb, var(--muted) 55%, transparent);
+  background: var(--portrait);
+  border: 1px solid var(--rule);
   border-radius: 4px;
-}
-
-.headshot-initials {
-  display: grid;
-  place-items: center;
-  width: 76px;
-  height: 76px;
-  color: var(--accent);
-  background: color-mix(in srgb, var(--page) 76%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-  border-radius: 50%;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 25px;
-  letter-spacing: 0.04em;
-}
-
-.headshot-label {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  left: 12px;
-  padding-top: 9px;
-  border-top: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .rail-kicker {

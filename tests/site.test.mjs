@@ -24,6 +24,8 @@ test("contains the approved academic homepage content", async () => {
   assert.match(html, /B\.S\. in Mathematics and Applied Mathematics \(Double Major\)/);
   assert.match(html, /IferW48AAAAJ/);
   assert.match(html, /0000-0003-3498-4741/);
+  assert.match(html, /src="headshot\.jpg"/);
+  assert.match(html, /alt="Professional headshot of Nan Zhao"/);
   assert.equal((html.match(/class="obfuscated-email"/g) ?? []).length, 2);
   assert.match(html, /nzhao[\s\S]*AT[\s\S]*iastate[\s\S]*DOT[\s\S]*edu/);
   assert.doesNotMatch(html, /iowastate/i);
@@ -57,6 +59,7 @@ test("includes all static publishing assets", async () => {
   const paths = [
     "site/index.html",
     "site/styles.css",
+    "site/headshot.jpg",
     "site/.nojekyll",
     "site/robots.txt",
     "site/sitemap.xml",
